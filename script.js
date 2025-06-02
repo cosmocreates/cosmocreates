@@ -19,7 +19,7 @@ const skipPulseMeasures = new Set([
 
 let spinningAnimationPlayed = false;
 
-/* alert('Thanks for visiting! Enable sound for the best experience (Slight epilepsy warning)') */
+alert('Thanks for visiting! Enable sound for the best experience (Slight epilepsy warning)')
 
 function startQuarterNoteClock() {
     let expected = performance.now() + QUARTER_NOTE_INTERVAL;
