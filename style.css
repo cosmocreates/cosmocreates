@@ -83,6 +83,28 @@ body {
     100%{transform: scale(1); filter: brightness(100%) hue-rotate(0deg)}
 }
 
+@keyframes wahwah6 {
+  0% {
+    transform: translateX(-80px) translateY(130%) scaleY(100%);
+  }
+
+  25% {
+    transform: translateX(-80px) translateY(130%) scaleY(90%);
+  }
+
+  50% {
+    transform: translateX(-80px) translateY(130%) scaleY(100%);
+  }
+
+  75% {
+    transform: translateX(-80px) translateY(130%) scaleY(95%);
+  }
+
+  100% {
+    transform: translateX(-80px) translateY(130%);
+  }
+}
+
 button {
   padding: 8px 16px;
   border-radius: 4px;
@@ -117,6 +139,19 @@ button:hover {
   transform: scale(0.5);
   animation-name: wahwah;
   animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.background-underlay-3 {
+  transform-origin: bottom;
+  object-fit: contain;
+  width: 400px;
+  height: 30%;
+  opacity: 1;
+  mix-blend-mode: luminosity;
+    transform: translateX(-80px) translateY(130%);
+  animation-name: wahwah6;
+  animation-duration: 300ms;
   animation-iteration-count: infinite;
 }
 
