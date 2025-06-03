@@ -7,8 +7,17 @@
   -webkit-user-drag: none;
 }
 
+#notification {
+  text-align: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding: 12px 0 12px 12px;
+  background: rgb(221, 132, 81);
+  box-shadow: 0 0 24px #00000088;
+}
+
 body {
-  padding: 48px;
   min-height: 100vh;
   background-size: cover;
   background-image: linear-gradient(rgb(51, 46, 56) , rgb(185, 116, 104), rgb(126, 104, 133));
