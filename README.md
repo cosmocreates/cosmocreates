@@ -1,5 +1,5 @@
 ## Welcome!
-I make Roblox games and I'm interested in game development!\
+I make Roblox games and I'm interested in game development!
 
 My game-dev server:
 **-> https://discord.gg/AXmnCTN4Kz <-**
