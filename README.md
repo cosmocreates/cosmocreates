@@ -12,4 +12,4 @@ I'm not in a relationship right now - taking a break from it, actually.\
 Thank you for taking the time to read this and get to know me if you haven't already!
 
 ## Socials
-I use Discord. Here's my user: c_smo
+I use Discord. Here's my user: `c_smo`
