@@ -1,230 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
-  margin: 0;
-  box-sizing: border-box;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-#notification {
-  text-align: center;
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  padding: 12px 0 12px 12px;
-  background: rgb(221, 132, 81);
-  box-shadow: 0 0 24px #00000088;
-}
-
-body {
-  min-height: 100vh;
-  background-size: cover;
-  background-image: linear-gradient(rgb(51, 46, 56) , rgb(185, 116, 104), rgb(126, 104, 133));
-      background-size: 200% 200%;
-  color: #fff;
-    animation-name: wahwah2;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-}
-
-.pulse-background {
-  animation-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.background-underlay {
-  opacity: 0.5;
-  mix-blend-mode: soft-light;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover
-}
-
-@keyframes wahwah {
-  0%, 100% { transform: scale(0.5) skew(0deg, 0deg) rotate3d(0, 0, 0, 0deg) translate(0px, 0px); }
-  5%  { transform: scale(0.4) skew(5deg, -3deg) rotate3d(1, 1, 0, 12deg) translate(-10px, 15px); }
-  10% { transform: scale(0.5) skew(-8deg, 6deg) rotate3d(0, 1, 1, 22deg) translate(20px, -5px); }
-  15% { transform: scale(0.4) skew(10deg, -10deg) rotate3d(1, 0, 1, 18deg) translate(-25px, 25px); }
-  20% { transform: scale(0.5) skew(-15deg, 5deg) rotate3d(0, 1, 0, 25deg) translate(12px, -20px); }
-  25% { transform: scale(0.4) skew(12deg, 8deg) rotate3d(1, 1, 0, 30deg) translate(-18px, 10px); }
-  30% { transform: scale(0.5) skew(-5deg, -5deg) rotate3d(1, 0, 1, 10deg) translate(5px, 8px); }
-  35% { transform: scale(0.4) skew(0deg, 10deg) rotate3d(0, 1, 1, 15deg) translate(-7px, -22px); }
-  40% { transform: scale(0.5) skew(8deg, -12deg) rotate3d(1, 0, 0, 20deg) translate(14px, 6px); }
-  45% { transform: scale(0.4) skew(-10deg, 15deg) rotate3d(0, 1, 0, 28deg) translate(25px, -8px); }
-  50% { transform: scale(0.5) skew(7deg, -7deg) rotate3d(1, 1, 1, 16deg) translate(-20px, 20px); }
-  55% { transform: scale(0.4) skew(-12deg, 3deg) rotate3d(0, 0, 1, 25deg) translate(3px, -3px); }
-  60% { transform: scale(0.5) skew(10deg, 10deg) rotate3d(1, 0, 0, 12deg) translate(-15px, -12px); }
-  65% { transform: scale(0.4) skew(-8deg, -8deg) rotate3d(0, 1, 1, 20deg) translate(8px, 18px); }
-  70% { transform: scale(0.5) skew(5deg, -15deg) rotate3d(1, 0, 1, 22deg) translate(-6px, 10px); }
-  75% { transform: scale(0.4) skew(-10deg, 10deg) rotate3d(1, 1, 0, 18deg) translate(11px, -14px); }
-  80% { transform: scale(0.5) skew(12deg, -6deg) rotate3d(0, 1, 0, 30deg) translate(-25px, -9px); }
-  85% { transform: scale(0.4) skew(-6deg, 6deg) rotate3d(1, 0, 0, 24deg) translate(17px, 7px); }
-  90% { transform: scale(0.5) skew(0deg, 0deg) rotate3d(0, 0, 1, 12deg) translate(0px, 0px); }
-  95% { transform: scale(0.4) skew(8deg, -8deg) rotate3d(1, 1, 1, 20deg) translate(-13px, 13px); }
-}
-
-@keyframes wahwah2 {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-
-@keyframes wahwah3 {
-    1%{transform: scale(1.1); filter: brightness(210%) blur(8px)}
-    100%{transform: scale(1)}
-}
-
-@keyframes wahwah4 {
-    0%{transform: rotate3d(0, 1, 0, 12deg)}
-    20%{transform: rotate3d(0.2, 1, 0.1, -12deg)}
-    40%{transform:  rotate3d(1, 0.2, 0, 24deg)}
-    60%{transform: rotate3d(0.5, 0.2, 0.2, -9deg)}
-    80%{transform: rotate3d(1, 1, 0, 22deg)}
-    /* animation reverts here, 100% */
-}
-
-@keyframes wahwah5 {
-  0%{filter:brightness(100%)}
-    85%{transform: scale(1.4); filter: invert(100%) brightness(125%) contrast(400%) hue-rotate(80deg)}
-    100%{transform: scale(1); filter: brightness(100%) hue-rotate(0deg)}
-}
-
-@keyframes wahwah6 {
-  0% {
-    transform: translateX(-80px) translateY(130%) scaleY(100%);
-  }
-
-  25% {
-    transform: translateX(-80px) translateY(130%) scaleY(90%);
-  }
-
-  50% {
-    transform: translateX(-80px) translateY(130%) scaleY(100%);
-  }
-
-  75% {
-    transform: translateX(-80px) translateY(130%) scaleY(95%);
-  }
-
-  100% {
-    transform: translateX(-80px) translateY(130%);
-  }
-}
-
-button {
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 12pt;
-  border: none;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  transform: scale(1);
-  transition: all 100ms;
-}
-
-button:hover {
-  transform: scale(0.9);
-}
-
-.container-int {
-    animation-name: wahwah4;
-    transform: rotate3d(0, 1, 0, 12deg);
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
-  animation-fill-mode:forwards;
-}
-
-.container-inta {
-  animation-direction: reverse;
-}
-
-.background-underlay-2 {
-  opacity: 1;
-  mix-blend-mode: luminosity;
-  transform: scale(0.5);
-  animation-name: wahwah;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-.background-underlay-3 {
-  transform-origin: bottom;
-  object-fit: contain;
-  width: 400px;
-  height: 30%;
-  opacity: 1;
-  mix-blend-mode: luminosity;
-    transform: translateX(-80px) translateY(130%);
-  animation-name: wahwah6;
-  animation-duration: 300ms;
-  animation-iteration-count: infinite;
+    color: white;
+    box-sizing: border-box;
+      font-family: "Ubuntu", sans-serif;
+      user-select: none;
+      -webkit-user-drag: none;
+      margin: 0;
 }
 
 .container {
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.2);
-  margin: 8px auto;
-  padding: 24px 24px;
-  max-width: 600px;
-  color: white;
-  backdrop-filter: contrast(130%) blur(8px);
+    background-image: linear-gradient(0deg, rgb(90, 78, 69), rgb(59, 44, 40));
+    padding: 24px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-[blend="overlay"] {
-  mix-blend-mode: overlay;
+body {
+    background-color: rgb(39, 29, 26);
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 12px;
+    display: flex;
+    gap: 24px;
 }
 
-p, li, button {
-  font-size: 14pt;
+#side {
+    height: fit-content;
 }
 
-h1 {
-  font-size: 25pt;
-  background: -webkit-linear-gradient(rgb(255, 125, 73) , rgb(255, 184, 211));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0 0 6px 0;
+body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/checkerPattern.png);
+        background-position: 100%;
+        opacity: 0.02;
+        z-index: -1;
+        animation-name: checkerAnimate;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, button {
-  font-family: 'Ubuntu', monospace;
-}
-
-p, li {
-  line-height: 1.45;
-  font-family: 'Ubuntu', monospace;
-}
-
-li {
-  display: list-item;
-  list-style-type: "☆";
-  padding-inline-start: 1ch;
-}
-
-.content-right {
-  float: right;
-}
-
-img {
-  border-radius: 6px;
-}
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    padding: 8px;
-    width: fit-content;
-    gap: 8px;
+@media screen and (max-width: 800px) {
+  body {
+    flex-direction: column;
   }
 
-  .grid-container > div {
-  align-self: stretch;
-  justify-self: stretch;
-  width: 260px;
-  margin: 2px 0;
+  .container {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+
+.pfp {
+    width: 70px;
+    border-radius: 10px;
+}
+
+.eContainer {
+    display: flex;
+    gap: 16px;
+    background-color: rgb(37, 32, 26);
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px dashed rgb(146, 117, 94)
+}
+
+.eContainer * {
+    margin: 0;
+}
+
+.eContainer p {
+    color: rgb(207, 173, 158);
+}
+
+#pfpText {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+@keyframes checkerAnimate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+#deviantart *, #reddit *, #spotify *, #github *, #discord * {
+    transition: all 300ms;
+}
+
+#deviantart:hover * {
+    color: rgb(80, 243, 153);
+}
+
+#reddit:hover * {
+        color: rgb(255, 99, 71);
+}
+
+#spotify:hover * {
+        color: rgb(36, 243, 88);
+}
+
+#github:hover * {
+        color: rgb(170, 170, 170);
+}
+
+#discord * {
+    color: rgb(106, 103, 255);
+}
+
+::selection {
+    background: #a55f31;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #a55f31;
+    color: #EEE;
+    text-shadow: none;
 }
